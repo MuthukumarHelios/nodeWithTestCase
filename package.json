@@ -8,16 +8,17 @@
     "mon": "nodemon server.js",
     "test:cover": "nyc mocha",
     "test-cover-final": "nyc --reporter=html --reporter=text mocha",
-    "test:c":"npm run test:cover && npm run test-cover-final"
-    
+    "test:c": "npm run test:cover && npm run test-cover-final"
   },
   "author": "muthukumar",
   "license": "ISC",
   "dependencies": {
     "await": "^0.2.6",
+    "chai": "^4.1.2",
     "express": "^4.16.3",
     "middleware": "^1.0.0",
     "mongodb": "^3.1.0",
-    "mongoose": "^5.2.0"
+    "mongoose": "^5.2.0",
+    "sinon": "^6.1.0"
   }
 }

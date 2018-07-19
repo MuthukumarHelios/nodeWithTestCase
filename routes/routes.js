@@ -7,6 +7,7 @@ var mongoose = require("mongoose")
 var db = require("../db.js")
 
 mongoUrl = "mongodb://localhost:27017/ekaushalnsdc"
+var multer = require("multer")({ dest: 'uploads/' })
 
 router.use(m.log)
 
@@ -29,6 +30,7 @@ if(er) {
  })
  })
 })
+router.post("/async/upload",  multer.any(),c.uploadFile)
 
 // aync.waterFall Method Syncronise way of code handling
 router.get("/async/waterfall/find",  (req, res) => {

@@ -11,3 +11,9 @@ exports.findBatches = async (req, res) => {
          return
     }
 }
+
+
+exports.uploadFile = async (req, res) => {
+    console.log("req.file",req.body)
+    res.json("just to test for fileUplolad")
+}

@@ -2,14 +2,14 @@
 FROM node:8
 
 # current Working Directory of the Project
-WORKDIR /home/user/projects/nodeWithTestCase
+WORKDIR ./
 
-COPY package*.json ./
+COPY package.json ./
 
 # install Dependency
 RUN npm i
 # bundling your Source Code
-COPY ..
+COPY ./ ./
 
 
 EXPOSE 4000
